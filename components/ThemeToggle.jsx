@@ -9,8 +9,9 @@ export default function ThemeToggle({ theme, setTheme }) {
       aria-label="Toggle theme"
       title="Toggle theme"
     >
-      {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-      <span className="hidden sm:inline">{theme === "dark" ? "Light" : "Dark"}</span>
+      <Sun className="hidden h-4 w-4 dark:inline-block" />
+      <Moon className="inline-block h-4 w-4 dark:hidden" />
+      <span className="hidden sm:inline">Theme</span>
     </button>
   );
 }
